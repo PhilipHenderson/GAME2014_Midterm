@@ -38,13 +38,14 @@ public class BulletFactory : MonoBehaviour
         {
             case BulletType.PLAYER:
                 bullet.GetComponent<SpriteRenderer>().sprite = playerBulletSprite;
-                bullet.GetComponent<BulletBehaviour>().SetDirection(BulletDirection.UP);
+                bullet.GetComponent<BulletBehaviour>().SetDirection(BulletDirection.RIGHT);
+                bullet.transform.localRotation = Quaternion.Euler(0.0f, 0.0f, -90.0f);
                 bullet.name = "PlayerBullet";
                 break;
             case BulletType.ENEMY:
                 bullet.GetComponent<SpriteRenderer>().sprite = enemyBulletSprite;
-                bullet.GetComponent<BulletBehaviour>().SetDirection(BulletDirection.DOWN);
-                bullet.transform.localRotation = Quaternion.Euler(0.0f, 0.0f, 180.0f);
+                bullet.GetComponent<BulletBehaviour>().SetDirection(BulletDirection.LEFT);
+                bullet.transform.localRotation = Quaternion.Euler(0.0f, 0.0f, 270.0f);
                 bullet.name = "EnemyBullet";
                 break;
         }

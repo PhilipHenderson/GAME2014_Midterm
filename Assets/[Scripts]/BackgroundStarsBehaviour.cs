@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundStarsBehaviour : MonoBehaviour
 {
-    public float verticalSpeed;
+    public float horizontalSpeed;
     public Boundary boundary;
     
 
@@ -17,12 +17,12 @@ public class BackgroundStarsBehaviour : MonoBehaviour
 
     public void Move()
     {
-        transform.position -= new Vector3(0.0f, verticalSpeed * Time.deltaTime);
+        transform.position -= new Vector3(horizontalSpeed * Time.deltaTime, 0.0f);
     }
 
     public void CheckBounds()
     {
-        if (transform.position.y < boundary.min)
+        if (transform.position.x < boundary.min)
         {
             ResetStars();
         }
@@ -30,6 +30,6 @@ public class BackgroundStarsBehaviour : MonoBehaviour
 
     public void ResetStars()
     {
-        transform.position = new Vector2(0.0f, boundary.max);
+        transform.position = new Vector2(boundary.max, 0.0f);
     }
 }

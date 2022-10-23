@@ -9,12 +9,14 @@ public class GameController : MonoBehaviour
     
     private List<GameObject> enemyList;
     private GameObject enemyPrefab;
+    public Vector3 enemyY;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyPrefab = Resources.Load<GameObject>("Prefabs/Enemy");
         BuildEnemyList();
+        enemyY = new Vector3(0.0f, 9.0f, 0.0f);
     }
 
 
@@ -24,7 +26,7 @@ public class GameController : MonoBehaviour
 
         for (var i = 0; i < enemyNumber; i++)
         {
-            var enemy = Instantiate(enemyPrefab);
+            var enemy = Instantiate(enemyPrefab, enemyY, Quaternion.identity);
             enemyList.Add(enemy);
         }
     }

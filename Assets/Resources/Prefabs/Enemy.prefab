@@ -111,16 +111,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7203750789442718603}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 3, z: 0}
+  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 537311675}
   - {fileID: 6960280053245736349}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
 --- !u!212 &7203750789442718601
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -222,22 +222,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3215009b3e2dc42b1399f71f8e29c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalBoundary:
-    min: -2
-    max: 2
-  verticalBoundary:
-    min: 5.5
-    max: 8.5
+  vBoundary:
+    min: -4
+    max: 4
+  hBoundary:
+    min: 9
+    max: 9.1
   screenBounds:
-    min: -8.5
-    max: 8.5
-  horizontalSpeed: 0
-  verticalSpeed: 0
-  spriteRenderer: {fileID: 0}
+    min: 9
+    max: 9.1
+  vSpeed: 10
   randomColor: {r: 0, g: 0, b: 0, a: 0}
-  bulletSpawnPoint: {fileID: 6960280053245736349}
-  fireRate: 0.2
-  bulletManager: {fileID: 0}
 --- !u!1 &8223608899139750281
 GameObject:
   m_ObjectHideFlags: 0
